@@ -1,0 +1,288 @@
+/*Navbar Section Style*/
+	header{
+		position: relative;
+		z-index: 1;
+	}
+	.navbar{
+		position: fixed;
+		width: 100%;
+		background-color: rgba(0,0,0, 0.3);
+		backdrop-filter: blur(2px);
+	}
+	.navbar-brand {
+		color: white;
+		text-shadow: 4px 4px 10px black;
+	}
+	.navbar-brand:hover {
+	}
+	.nav-item a{
+		color: white;
+		text-shadow: 4px 4px 10px black;
+	}
+	.nav-item a:hover{
+	}
+
+/*Jumbotron Section Style*/
+
+.jumbotron {
+	height: 350px;
+	background-image: url(./img/bg-jumbotron.jpg);
+	text-align: center;
+	background-size: cover;
+	background-position: 0 -100px;
+	background-attachment: fixed;
+	position: relative;
+	box-shadow: 2px, 2px, 2px, black;
+}
+.jumbotron::after{
+	content:'';
+	height: 100%;
+	width: 100%;
+	background:linear-gradient(to top, rgb(0,0,0)0%, rgba(255,255,255,0)100%);
+	background:-webkit-linear-gradient(to top, rgba(255,255,255,0) 0%, rgb(0,0,0));
+	background:-o-linear-gradient(to top, rgba(255,255,255,0) 0%, rgb(0,0,0)); 
+	position: absolute;
+	top:0;
+	left: 0;
+	opacity: 0.5;
+}
+
+.profile h1{
+	color: #000;
+	margin-top: 100px;
+	font-size: 30px;
+}
+/*End of Jumbotron Style Section*/
+
+
+/*aboutme Section*/
+.aboutme p{
+	line-height: 25px;
+	transform: translate(0 50px);
+	opacity: 0;
+	transition: 1s;	
+}
+.aboutme p.show{
+	line-height: 25px;
+	opacity: 1;
+	transition-delay: 1.5s;	
+}
+
+/*Skill & Education Section Style*/
+.main{
+	padding-top: 30px;
+}
+
+.school h3, .skill{
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.school, .skill{
+	transform: translate(0 50px);
+	opacity: 0;
+	transition: 1s;
+}
+.school.show, .skill.show{
+	opacity: 1;
+	transition-delay: 0.5s;
+}
+
+.skills li{
+	list-style: none;
+	margin: 0px 0 40px 0;
+}
+
+.bar{
+	box-sizing: content-box;
+	background: #353b48;
+	display: block;
+	height: 2px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 3px;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px #2187e7b3;
+	width: 0%;
+	opacity: 0;
+	transition: 1.5s;
+	transform-origin: left;
+}
+.bar.show{
+	opacity: 1;
+	width: 100%;
+	transition-delay: 1s; 
+}
+.html::after{
+	content: '';
+	height: 2px;
+	float: left;
+	background: white;
+	width: 0%;
+}
+.html.show::after{
+	width: 90%;
+	transition: 1s;
+	transition-delay: 2.5s;
+}
+
+.css::after{
+	content: '';
+	height: 2px;
+	float: left;
+	background: white;
+	width: 0%;
+}
+.css.show::after{
+	width: 80%;
+	transition: 1s;
+	transition-delay: 2.5s;
+}
+.javascript::after{
+	content: '';
+	height: 2px;
+	float: left;
+	background: white;
+	width: 0%;
+}
+.javascript.show::after{
+	width: 70%;
+	transition: 1s;
+	transition-delay: 2.5s;
+}
+.reactjs::after{
+	content: '';
+	height: 2px;
+	float: left;
+	background: white;
+	width: 0%;
+}
+.reactjs.show::after{
+	width: 50%;
+	transition: 1s;
+	transition-delay: 2.5s;
+}
+.jquery::after{
+	content: '';
+	height: 2px;
+	float: left;
+	background: white;
+	width: 0%;
+}
+.jquery.show::after{
+	width: 60%;
+	transition: 1s;
+	transition-delay: 2.5s;
+}
+/*Footer*/
+footer{
+	background-color: rgba(220,220, 220, 0.7);
+	text-align: center;
+}
+/*End Of Aboutme Section*/
+
+/*Portfolio Section*/
+.card{
+	opacity: 0;
+	transition: 1s;
+	transform: translate(0, 100px);
+}
+.card.show{
+	opacity: 1;
+	transform: none;
+}
+
+
+/*contact section */
+.biodata{
+	opacity: 0;
+	transition: 1s;
+	transition-delay: 1s;
+}
+.biodata.show{
+	opacity: 1;
+}
+.message{
+	opacity: 0;
+	transition: 1s;
+	transition-delay: 1s;	
+}
+.message.show{
+	opacity: 1;
+}
+
+
+/*Utilities*/
+.heading{
+	display: inline-block;
+	font-size: 30px;
+	font-weight: normal;
+	margin: 20px 0;
+	position: relative;
+	transition: 0.5s;
+	transform: scaleX(0);
+	transform-origin: left;
+}
+.heading.show{
+	transform: scaleX(1);
+}
+.heading::after{
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: gainsboro;
+	transition: 0.5s;
+	transform: scaleX(1);
+	transform-origin: right;
+}
+
+.heading.show::after{
+	transform: scaleX(0);
+	transition-delay: 1s;
+}
+
+.fab{
+	color: gainsboro;
+}
+.fab:hover{
+	color: cyan;
+	text-shadow: -2px -1px 1px darkblue;
+}
+.fab:active{
+	color: cyan;
+	text-shadow: 0px 0px 0px darkblue;
+
+}
+
+.socmed{
+	width: 100%;
+	text-align: left;
+	margin-top: 30px;
+
+}
+.socmed a{
+	margin-left: 40px;
+	font-size: 30px;
+
+}
+/*Desktop Version*/
+@media (min-width: 992px) 
+{
+	header{
+		position: relative;
+		z-index: 1;
+	}
+	.jumbotron{
+		height: 550px;
+		text-align: left;
+	}
+
+	.profile{
+		color: #000;
+		font-size: 1.2em;
+		margin-top: 150px;
+	}
+}
